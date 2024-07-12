@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.starting-container{
+    background-color: white;
+    width: 0vw;
+    height: 0vh;
+    opacity: 0;
+    animation: con 3.5s ease 1;   
+    position: absolute; 
+    overflow: hidden;
+    z-index: 1;
+}
+.starting-container::after{
+    z-index: -1;
+}
+@keyframes con {
+    0%{
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    50%{
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    60%{
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    90%{
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+        
+    }
+    95%{
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    100%{
+        opacity: 0%;
+        width: 0;
+        height: 0;
+    }
+}
+
+.s-container{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+.s1-container{
+    background-color: rgb(237, 237, 237);
+    height: 35rem;
+    width: 35rem;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: bub 2.3s linear;
+    animation-delay: 1s;
+    opacity: 0;
+
+}
+@keyframes bub {
+    0%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    50%{
+        opacity: 50%;
+        width: 13rem;
+        height: 13rem;
+    }
+    100%{
+        opacity: 100%;
+        width: 35rem;
+        height: 35rem;
+    }
+    
+}
+
+.s1-container>div>img{
+    width: 15rem;
+    margin-bottom: 2rem;
+    animation: gbub 5s ease;
+    animation-delay: 5s;
+}
+.s1-container>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@keyframes gbub {
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+    50%{
+        opacity: 100%;
+        width: 15rem;
+    }
+
+    100%{
+        opacity:0;
+        width: 0rem;
+    }
+    
+}
+.s1-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: lbub 2s linear;
+    opacity: 50%;
+}
+.s1-container>.s1-con>p{
+    color: #8f8f8f;
+    width: 100rem;
+    font-size: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+@keyframes lbub {
+    0%{
+
+        opacity: 0;
+    }
+    100%{
+        opacity: 50%;
+    }
+    
+}
+.e-container>p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: end;
+    margin: 2rem;
+    color: rgb(126, 126, 126);
+}
+.e-container>p>a{
+    text-decoration: none;
+    color: rgb(38, 38, 248);
+}
+
+.main{
+    background-color: rgb(246,248,252);
+    width: 100%;
+    height: 100%;
+}
+/* header */
+header{
+    width: 100%;
+    padding: 8px;
+    position: fixed;
+}
+.header-main{
+    background-color: rgb(246,248,252);
+    display: flex;
+}
+.header-left{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    min-width: 238px;
+}
+.bars>svg{
+    width: 1.5rem;
+    fill: rgb(95,99,104);
+}
+.bars{
+    padding: 12px 12px 12px 12px;
+    margin: 2px 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bars:hover{
+    background-color: rgba(60, 64, 67, .08);
+    border-radius: 50%;
+}
+.header-center{
+    display: flex;
+    margin-left: 3px;
+}
+.h-center1{
+    display: flex;
+    align-items: center;
+    min-width: 69rem;
+}
+.h-center11{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaf1fb;
+    border-radius: 24px;
+}
+.h-center11-search{
+    padding: 6px 6px 6px 6px;
+    width: 2.2rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 6px;
+    cursor: pointer;
+    fill: rgb(95,99,104);
+}
+.h-center11-search:hover{
+    background-color: rgba(60, 64, 67, .08);
+    border-radius: 50%;
+}
+#h-center11-search-input{
+    width: 40.2rem;
+}
+.h-center11-search-input{
+    background-color: #eaf1fb ;
+    font-size: 1rem;
+    border: 0;
+    width: 40rem;
+}
+
+.h-center11-search-input:focus{
+    outline: none;
+}
+.h-center11-search-option{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px 8px 3px 3px;
+    cursor: pointer;
+    width: 2.5rem;
+    fill: rgb(95,99,104);
+}
+
+.h-center11-search-option:hover{
+    background-color: rgba(60, 64, 67, .08);
+    border-radius: 50%;
+}
+.h-center2{
+    display: flex;
+    align-items: center;
+}
+.h-center21{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    width: 2.5rem;
+    fill: rgb(95,99,104);
+    cursor: pointer;
+}
+.h-center21:hover{
+    background-color: rgba(60, 64, 67, .08);
+    border-radius: 50%;
+}
+.h-center21>svg{
+    color: rgb(95,99,104);
+}
+.h-center22{
+    padding: 8px;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: rgb(95,99,104);
+    cursor: pointer;
+}
+.h-center22:hover{
+    background-color: rgba(60, 64, 67, .08);
+    border-radius: 50%;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h-right-grid{
+    width: 2.5rem;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: rgb(95,99,104);
+    cursor: pointer;
+}
+.h-right-grid:hover{
+    background-color: rgba(60, 64, 67, .08);
+    border-radius: 50%;
+}
+
+.h-right-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 4px 4px 4px;
+    cursor: pointer;
+}
+.h-right-img:hover{
+    background-color: rgba(60, 64, 67, .08);
+    border-radius: 50%;
+}
+.h-right-img>img{
+    width: 2rem;
+    border-radius: 50%;
+}
